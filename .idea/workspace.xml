@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e2c186f-c14f-4816-8709-a3879e33aa31" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="QSabe2.iws" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.10914928" vertical-offset="0" max-vertical-offset="623">
+            <state line="3" column="77" selection-start="92" selection-end="92" vertical-scroll-proportion="0.08186196" vertical-offset="0" max-vertical-offset="623">
               <folding />
             </state>
           </provider>
@@ -304,12 +302,18 @@
       <created>1401998225160</created>
       <updated>1401998225160</updated>
     </task>
+    <task id="LOCAL-00001" summary="adicionadas descrições no readme">
+      <created>1402232898407</created>
+      <updated>1402232898407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -337,6 +341,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="adicionadas descrições no readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionadas descrições no readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -344,7 +350,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.10914928" vertical-offset="0" max-vertical-offset="623">
+        <state line="3" column="77" selection-start="92" selection-end="92" vertical-scroll-proportion="0.08186196" vertical-offset="0" max-vertical-offset="623">
           <folding />
         </state>
       </provider>
