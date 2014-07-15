@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<!-- Seções  -->
+<div id="list">
+<table border="0" cellpadding="4" width="100%">
+    <tr>
+        <td></td>
+        <td>Respostas</td>
+        <td>Última Resposta</td>
+        <td></td>
+    </tr>
+
+    {% for questao in questoes %}
+    <tr>
+        <td {% if forloop.last %}class="last"{% endif %}>
+        <div class="title"> <a href="{% url 'questao' questao.pk%}" >{{ questao.titulo}}</a>
+            </div></td>
+        <td {% if forloop.last %}class="last"{% endif %}>{{ questao.numPostagem }}</td>
+        <td {% if forloop.last %}class="last"{% endif %}>
+            {{ questao.ultimaPostagem}}</td>
+        <td {% if forloop.last %}class="last"{% endif %}>
+            <a class="button" href="/admin/QSabe2_Nucleo/pergunta/{{ questao.id }}/" >VER</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</div>
+
+</body>
+</html>

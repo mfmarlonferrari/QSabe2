@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<!-- Perguntas  -->
+<a id="new_topic" class="buttont" href=
+"{% url 'postar' 'nova_pergunta' pk %}">Nova Pergunta</a>
+<br />
+<br />
+
+<div id="list">
+<table border="0" cellpadding="4" width="100%">
+    <tr>
+        <td>Perguntas</td>
+        <td>Respostas</td>
+        <td>Última resposta</td>
+        <td></td>
+    </tr>
+
+    {% for pergunta in perguntas %}
+    <tr>
+        <td {% if forloop.last %}class="last"{% endif %}>
+        <div class="title"><a href="{% url 'pergunta' pergunta.pk%}">{{ pergunta.titulo }}</a>
+            </div></td>
+        <td {% if forloop.last %}class="last"{% endif %}>{{ pergunta.numPostagem }}</td>
+        <td {% if forloop.last %}class="last"{% endif %}>
+            {{ pergunta.ultimaResposta|linebreaksbr }}</td>
+        <td {% if forloop.last %}class="last"{% endif %}>
+            <a class="button" href="{% url 'pergunta' pergunta.pk%}">VER</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+</div>
+
+</body>
+</html>

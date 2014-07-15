@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="main">
+        <div id="respnder">
+            <div id="rtitle">{{ titulo }}</div><br />
+
+            <form action="{{ acao }}" method="POST"> {% csrf_token %}
+                Destino: <input type="text" name="destino" size="60" value="{{ destino }}" /><br />
+                <textarea name="conteudo" id="conteudo"></textarea><br />
+                <input type="submit" value="Postar" id="submit" />
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
