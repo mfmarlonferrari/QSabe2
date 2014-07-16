@@ -22,6 +22,7 @@ class Questoes(models.Model):
 
 class Pergunta(models.Model):
     titulo = models.CharField(max_length=60)
+    explicacao = models.TextField()
     dtCriacao = models.DateTimeField(auto_now_add=True)
     criador = models.ForeignKey(User, blank=False, null=False)
     questoes = models.ForeignKey(Questoes)
@@ -48,6 +49,3 @@ class Resposta(models.Model):
 
     def __unicode__(self):
         return u"%s - %s - %s" % (self.criador, self.pergunta, self.titulo)
-
-    def short(self):
-        return u"%s - %s\n%s" % (self.criador, self.titulo, self.dtCriacao.strftime("%b %d, %I:%M %p"))

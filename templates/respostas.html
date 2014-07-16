@@ -6,12 +6,13 @@
 <body>
 <!-- Respostas  -->
 <div class="title">{{ titulo }}</div>
+<div class="explicacao">{{ explicacao }}</div>
 <div id="list">
 
     {% for resposta in respostas %}
         <div class="post">
-            <span class="title">{{ resposta.titulo }}</span><br />
-            por {{ resposta.criador }} | <span class="date">{{ resposta.dtCriacao }}</span> <br /><br />
+            <hr>
+            respondido por {{ resposta.criador }} | <span class="date">{{ resposta.dtCriacao }}</span> <br /><br />
             {{ resposta.texto }} <br />
         </div>
     {% endfor %}

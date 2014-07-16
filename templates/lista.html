@@ -24,7 +24,7 @@
         <td {% if forloop.last %}class="last"{% endif %}>
             {{ questao.ultimaPostagem}}</td>
         <td {% if forloop.last %}class="last"{% endif %}>
-            <a class="button" href="/admin/QSabe2_Nucleo/pergunta/{{ questao.id }}/" >VER</a>
+            <a class="button" href="{% url 'questao' questao.pk%}" >VER</a>
         </td>
     </tr>
 
