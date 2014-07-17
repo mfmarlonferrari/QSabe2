@@ -19,14 +19,11 @@
     {% for questao in questoes %}
     <tr>
         <td {% if forloop.last %}class="last"{% endif %}>
-        <div class="title"> <a href="{% url 'questao' questao.pk%}" >{{ questao.titulo}}</a>
+        <div class="title"> <a href="{% url 'questao' questao.pk%}" >{{ questao.titulo }}</a>
             </div></td>
         <td {% if forloop.last %}class="last"{% endif %}>{{ questao.numPostagem }}</td>
         <td {% if forloop.last %}class="last"{% endif %}>
             {{ questao.ultimaPostagem}}</td>
-        <td {% if forloop.last %}class="last"{% endif %}>
-            <a class="button" href="{% url 'questao' questao.pk%}" >VER</a>
-        </td>
     </tr>
 
     {% endfor %}

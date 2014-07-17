@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'QSabe2_Nucleo',
     'django.contrib.admin',
+    'taggit',
 )
 
 MIDDLEWARE_CLASSES = (

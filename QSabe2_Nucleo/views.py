@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.core.urlresolvers import reverse
-from QSabe2_Nucleo.models import Questoes, Pergunta, Resposta
+from QSabe2_Nucleo.models import Questoes, Pergunta, Resposta, PerfilUsuario
 import summarize
 import nltk
 
@@ -54,9 +54,10 @@ def nova_pergunta(request, pk):
         filtered_words = [w for w in emtags if w not in stopwords]
         substantivos = [word for word,pos in filtered_words if pos == 'NNP' or pos == 'NNS']
         tags = [w for w in substantivos if w not in stopwords]
-        pergunta = Pergunta.objects.create(questoes=questao, titulo=p["destino"], explicacao=p["conteudo"], tags=tags, \
+        pergunta = Pergunta.objects.create(questoes=questao, titulo=p["destino"], explicacao=p["conteudo"],
                                            criador=request.user)
-    return HttpResponseRedirect(reverse("QSabe2_Nucleo.views.questao", args=[pk]))
+        pergunta.tags.add(*tags)
+    return HttpResponseRedirect(reverse("questao", args=[pk]))
 
 def responder(request, pk):
     """Responde a uma pergunta"""
@@ -67,4 +68,7 @@ def responder(request, pk):
         titulo = titulo.summaries
         titulo = titulo[0]
         resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"], criador=request.user)
-    return HttpResponseRedirect(reverse("QSabe2_Nucleo.views.pergunta", args=[pk]) + "?page=last")
+        usuario = PerfilUsuario.objects.get(pk=pk)
+        tags = Pergunta.objects.get(pk=pk).tags
+        usuario.especialidades.add(*tags)
+    return HttpResponseRedirect(reverse("pergunta", args=[pk]))

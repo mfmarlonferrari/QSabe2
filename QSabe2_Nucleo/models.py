@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
+from django.db.models.signals import post_save
 
 class Questoes(models.Model):
     titulo = models.CharField(max_length=60)
@@ -26,7 +28,7 @@ class Pergunta(models.Model):
     dtCriacao = models.DateTimeField(auto_now_add=True)
     criador = models.ForeignKey(User, blank=False, null=False)
     questoes = models.ForeignKey(Questoes)
-    tags = models.CharField(max_length=60)
+    tags = TaggableManager()
 
     def numPostagem(self):
         return self.resposta_set.count()
@@ -47,7 +49,6 @@ class Resposta(models.Model):
     criador = models.ForeignKey(User, blank=False, null=False)
     pergunta = models.ForeignKey(Pergunta)
     texto = models.TextField()
-    tags = models.CharField(max_length=60)
 
     def InfoPerfil(self):
         perfil = self.criador.perfilusuario_set.all()[0]
@@ -59,7 +60,15 @@ class Resposta(models.Model):
 class PerfilUsuario(models.Model):
     postagens = models.IntegerField(default=0)
     usuario = models.ForeignKey(User, unique=True)
-    especialidades = models.TextField()
+    especialidades = TaggableManager()
 
     def __unicode__(self):
-        return unicode(self.user)
+        return unicode(self.usuario)
+
+def cria_perfil_usuario(sender, **kwargs):
+    """Cria im perfil para o usuario ao criar conta"""
+    u = kwargs["instance"]
+    if not PerfilUsuario.objects.filter(usuario=u):
+        PerfilUsuario(usuario=u).save()
+
+post_save.connect(cria_perfil_usuario, sender=User)
