@@ -26,6 +26,7 @@ class Pergunta(models.Model):
     dtCriacao = models.DateTimeField(auto_now_add=True)
     criador = models.ForeignKey(User, blank=False, null=False)
     questoes = models.ForeignKey(Questoes)
+    tags = models.CharField(max_length=60)
 
     def numPostagem(self):
         return self.resposta_set.count()
@@ -46,6 +47,19 @@ class Resposta(models.Model):
     criador = models.ForeignKey(User, blank=False, null=False)
     pergunta = models.ForeignKey(Pergunta)
     texto = models.TextField()
+    tags = models.CharField(max_length=60)
+
+    def InfoPerfil(self):
+        perfil = self.criador.perfilusuario_set.all()[0]
+        return perfil.postagens, perfil.especialidades
 
     def __unicode__(self):
         return u"%s - %s - %s" % (self.criador, self.pergunta, self.titulo)
+
+class PerfilUsuario(models.Model):
+    postagens = models.IntegerField(default=0)
+    usuario = models.ForeignKey(User, unique=True)
+    especialidades = models.TextField()
+
+    def __unicode__(self):
+        return unicode(self.user)

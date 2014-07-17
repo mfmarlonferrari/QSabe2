@@ -4,7 +4,8 @@
     <title></title>
 </head>
 <body>
-
+{% if not user.is_authenticated %}<a href="/">Você precisa se logar</a>
+{% else %}
 <!-- Seções  -->
 <div id="list">
 <table border="0" cellpadding="4" width="100%">
@@ -30,6 +31,6 @@
 
     {% endfor %}
 </div>
-
+{% endif %}
 </body>
 </html>

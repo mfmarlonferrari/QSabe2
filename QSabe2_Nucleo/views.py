@@ -2,6 +2,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.core.urlresolvers import reverse
 from QSabe2_Nucleo.models import Questoes, Pergunta, Resposta
+import summarize
+import nltk
 
 def main(request):
     questoes = Questoes.objects.all()
@@ -24,7 +26,8 @@ def pergunta(request, pk):
     respostas = Resposta.objects.filter(pergunta=pk).order_by("-dtCriacao")
     titulo = Pergunta.objects.get(pk=pk).titulo
     explicacao = Pergunta.objects.get(pk=pk).explicacao
-    context = dict(respostas=respostas, pk=pk, titulo=titulo, explicacao=explicacao)
+    tags = Pergunta.objects.get(pk=pk).tags
+    context = dict(respostas=respostas, pk=pk, titulo=titulo, explicacao=explicacao, tags=tags)
     return render(request, 'respostas.html', context)
 
 def postar(request, ptipo, pk):
@@ -44,7 +47,15 @@ def nova_pergunta(request, pk):
     p = request.POST
     if p["destino"] and p["conteudo"]:
         questao = Questoes.objects.get(pk=pk)
-        pergunta = Pergunta.objects.create(questoes=questao, titulo=p["destino"], explicacao=p["conteudo"], criador=request.user)
+        #agente de tokenizacao, tagging, removedor de stopwords
+        tokenizada = nltk.word_tokenize(p["destino"])
+        emtags = nltk.tag.pos_tag(tokenizada)
+        stopwords = nltk.corpus.stopwords.words('portuguese')
+        filtered_words = [w for w in emtags if w not in stopwords]
+        substantivos = [word for word,pos in filtered_words if pos == 'NNP' or pos == 'NNS']
+        tags = [w for w in substantivos if w not in stopwords]
+        pergunta = Pergunta.objects.create(questoes=questao, titulo=p["destino"], explicacao=p["conteudo"], tags=tags, \
+                                           criador=request.user)
     return HttpResponseRedirect(reverse("QSabe2_Nucleo.views.questao", args=[pk]))
 
 def responder(request, pk):
@@ -52,5 +63,8 @@ def responder(request, pk):
     p = request.POST
     if p["conteudo"]:
         pergunta = Pergunta.objects.get(pk=pk)
-        resposta = Resposta.objects.create(pergunta=pergunta, titulo=p["destino"], texto=p["conteudo"], criador=request.user)
+        titulo = summarize.summarize_text(p["conteudo"])
+        titulo = titulo.summaries
+        titulo = titulo[0]
+        resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"], criador=request.user)
     return HttpResponseRedirect(reverse("QSabe2_Nucleo.views.pergunta", args=[pk]) + "?page=last")
