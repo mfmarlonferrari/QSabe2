@@ -56,11 +56,14 @@ def nova_pergunta(request, pk):
     if p["destino"] and p["conteudo"]:
         questao = Questoes.objects.get(pk=pk)
         #tokenizacao, tagging, removedor de stopwords
-        tokenizada = nltk.word_tokenize(p["destino"])
+        frase = p["destino"]
+        frase = frase.lower()
+        tokenizada = nltk.word_tokenize(frase)
         emtags = nltk.tag.pos_tag(tokenizada)
         stopwords = nltk.corpus.stopwords.words('portuguese')
         filtered_words = [w for w in emtags if w not in stopwords]
-        substantivos = [word for word,pos in filtered_words if pos == 'NNP' or pos == 'NNS']
+        #filtra apenas os substantivos
+        substantivos = [word for word,pos in filtered_words if 'N' in pos]
         tags = [w for w in substantivos if w not in stopwords]
         pergunta = Pergunta.objects.create(questoes=questao, titulo=p["destino"], explicacao=p["conteudo"],
                                            criador=request.user)
