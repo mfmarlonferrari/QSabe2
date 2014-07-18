@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.core.urlresolvers import reverse
 from QSabe2_Nucleo.models import Questoes, Pergunta, Resposta, PerfilUsuario
+from taggit.models import Tag
 import summarize
 import nltk
 
@@ -64,11 +65,11 @@ def responder(request, pk):
     p = request.POST
     if p["conteudo"]:
         pergunta = Pergunta.objects.get(pk=pk)
+        tags = Tag.objects.filter(pergunta__id=pk)
         titulo = summarize.summarize_text(p["conteudo"])
         titulo = titulo.summaries
         titulo = titulo[0]
-        resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"], criador=request.user)
-        usuario = PerfilUsuario.objects.get(pk=pk)
-        tags = Pergunta.objects.get(pk=pk).tags
-        usuario.especialidades.add(*tags)
+        resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"],
+                                           criador=request.user)
+        resposta.tags.add(*tags)
     return HttpResponseRedirect(reverse("pergunta", args=[pk]))

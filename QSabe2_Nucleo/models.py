@@ -49,6 +49,7 @@ class Resposta(models.Model):
     criador = models.ForeignKey(User, blank=False, null=False)
     pergunta = models.ForeignKey(Pergunta)
     texto = models.TextField()
+    tags = TaggableManager()
 
     def InfoPerfil(self):
         perfil = self.criador.perfilusuario_set.all()[0]
@@ -60,7 +61,7 @@ class Resposta(models.Model):
 class PerfilUsuario(models.Model):
     postagens = models.IntegerField(default=0)
     usuario = models.ForeignKey(User, unique=True)
-    especialidades = TaggableManager()
+    especialidades = TaggableManager(blank=True)
 
     def __unicode__(self):
         return unicode(self.usuario)
