@@ -72,4 +72,7 @@ def responder(request, pk):
         resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"],
                                            criador=request.user)
         resposta.tags.add(*tags)
+        #insere tag no perfil
+        perfil = request.user.perfilusuario_set.all()[0]
+        perfil.especialidades.add(*tags)
     return HttpResponseRedirect(reverse("pergunta", args=[pk]))
