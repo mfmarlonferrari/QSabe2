@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2c186f-c14f-4816-8709-a3879e33aa31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/recomendadas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QSabe2_Nucleo/admin.py" afterPath="$PROJECT_DIR$/QSabe2_Nucleo/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login/login.html" afterPath="$PROJECT_DIR$/templates/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QSabe2_Nucleo/models.py" afterPath="$PROJECT_DIR$/QSabe2_Nucleo/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QSabe2/urls.py" afterPath="$PROJECT_DIR$/QSabe2/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QSabe2_Nucleo/views.py" afterPath="$PROJECT_DIR$/QSabe2_Nucleo/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lista.html" afterPath="$PROJECT_DIR$/templates/lista.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/perguntas.html" afterPath="$PROJECT_DIR$/templates/perguntas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/postar.html" afterPath="$PROJECT_DIR$/templates/postar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/recomendadas.html" afterPath="$PROJECT_DIR$/templates/recomendadas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/respostas.html" afterPath="$PROJECT_DIR$/templates/respostas.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="QSabe2.iws" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="26" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0" vertical-offset="865" max-vertical-offset="1292">
+            <state line="56" column="26" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -57,10 +57,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1513">
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
+            <state line="39" column="0" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1411">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,18 +66,25 @@
       <file leaf-file-name="recomendadas.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/recomendadas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="6" selection-start="739" selection-end="739" vertical-scroll-proportion="0.56398106" vertical-offset="0" max-vertical-offset="422">
-              <folding>
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="21" column="26" selection-start="730" selection-end="730" vertical-scroll-proportion="0.8902743" vertical-offset="0" max-vertical-offset="816">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login/login.html">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="58" selection-start="330" selection-end="330" vertical-scroll-proportion="-4.6538463" vertical-offset="32" max-vertical-offset="731">
+            <state line="8" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QSabe2/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1120" max-vertical-offset="1547">
               <folding />
             </state>
           </provider>
@@ -88,19 +93,8 @@
       <file leaf-file-name="respostas.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/respostas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="476">
+            <state line="35" column="11" selection-start="1262" selection-end="1262" vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="714">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QSabe2/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="86" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +102,7 @@
       <file leaf-file-name="postar.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/postar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-13.461538" vertical-offset="7" max-vertical-offset="476">
+            <state line="30" column="11" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-11.5" vertical-offset="211" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -117,7 +111,7 @@
       <file leaf-file-name="perguntas.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/perguntas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="148" selection-end="279" vertical-scroll-proportion="-6.3846154" vertical-offset="38" max-vertical-offset="867">
+            <state line="19" column="5" selection-start="756" selection-end="776" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -126,7 +120,7 @@
       <file leaf-file-name="lista.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/lista.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="34" selection-start="0" selection-end="817" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="646">
+            <state line="0" column="0" selection-start="0" selection-end="603" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
@@ -157,21 +151,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/forum/urls.py" />
         <option value="$PROJECT_DIR$/templates/novapergunta.html" />
-        <option value="$PROJECT_DIR$/templates/postar.html" />
         <option value="$PROJECT_DIR$/tags/models.py" />
         <option value="$PROJECT_DIR$/tags/views.py" />
         <option value="$PROJECT_DIR$/QSabe2/settings.py" />
-        <option value="$PROJECT_DIR$/templates/respostas.html" />
-        <option value="$PROJECT_DIR$/templates/perguntas.html" />
-        <option value="$PROJECT_DIR$/templates/lista.html" />
         <option value="$PROJECT_DIR$/QSabe2_Nucleo/models.py" />
         <option value="$PROJECT_DIR$/QSabe2_Nucleo/admin.py" />
         <option value="$PROJECT_DIR$/templates/recomendados.html" />
         <option value="$PROJECT_DIR$/QSabe2/urls.py" />
         <option value="$PROJECT_DIR$/QSabe2_Nucleo/views.py" />
         <option value="$PROJECT_DIR$/templates/login/login.html" />
+        <option value="$PROJECT_DIR$/templates/lista.html" />
+        <option value="$PROJECT_DIR$/templates/perguntas.html" />
+        <option value="$PROJECT_DIR$/templates/postar.html" />
+        <option value="$PROJECT_DIR$/templates/respostas.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/recomendadas.html" />
       </list>
     </option>
@@ -227,81 +221,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="templates">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="login">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2_Nucleo">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="QSabe2">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,19 +301,76 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="templates">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2_Nucleo">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="QSabe2">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -491,26 +467,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:/Python27/python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="QSabe2" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="true" />
-      <option name="customRunCommand" value="syncdb" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -536,7 +493,26 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:/Python27/python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="QSabe2" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="true" />
+      <option name="customRunCommand" value="syncdb" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -703,7 +679,11 @@
       <created>1405644195578</created>
       <updated>1405644195578</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="sistema de recomendação">
+      <created>1405697621086</created>
+      <updated>1405697621086</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -746,7 +726,8 @@
     <MESSAGE value="perfil de usuario e tagger" />
     <MESSAGE value="tags na resposta" />
     <MESSAGE value="tags nos perfis do usuário" />
-    <option name="LAST_COMMIT_MESSAGE" value="tags nos perfis do usuário" />
+    <MESSAGE value="sistema de recomendação" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistema de recomendação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,19 +735,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QSabe2/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="57" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,30 +752,9 @@
         <state line="3" column="66" selection-start="81" selection-end="81" vertical-scroll-proportion="0.08186196" vertical-offset="0" max-vertical-offset="623" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QSabe2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="11" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lista.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="0" selection-end="817" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/respostas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
@@ -817,58 +768,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="61" selection-start="720" selection-end="720" vertical-scroll-proportion="0.5644028" vertical-offset="167" max-vertical-offset="595">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1513">
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="24" column="61" selection-start="720" selection-end="720" vertical-scroll-proportion="0.5644028" vertical-offset="167" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="58" selection-start="330" selection-end="330" vertical-scroll-proportion="-4.6538463" vertical-offset="32" max-vertical-offset="731">
+        <state line="9" column="58" selection-start="330" selection-end="330" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QSabe2/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="86" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448">
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QSabe2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1120" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QSabe2_Nucleo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="1513">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/postar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="-13.461538" vertical-offset="7" max-vertical-offset="476">
+        <state line="30" column="11" selection-start="1028" selection-end="1028" vertical-scroll-proportion="-11.5" vertical-offset="211" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/perguntas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="148" selection-end="279" vertical-scroll-proportion="-6.3846154" vertical-offset="38" max-vertical-offset="867">
+        <state line="19" column="5" selection-start="756" selection-end="776" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/respostas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="11" selection-start="1262" selection-end="1262" vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="452" selection-end="452" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lista.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="603" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="782">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/recomendadas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="739" selection-end="739" vertical-scroll-proportion="0.56398106" vertical-offset="0" max-vertical-offset="422">
-          <folding>
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="21" column="26" selection-start="730" selection-end="730" vertical-scroll-proportion="0.8902743" vertical-offset="0" max-vertical-offset="816">
+          <folding />
         </state>
       </provider>
     </entry>
