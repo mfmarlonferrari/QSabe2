@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//PT"
-        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+{% extends "base.html" %}
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt">
-<head>
-        <title>Bem-Vindo ao QSABE2!</title>
-        
-</head>
-{% if user.is_authenticated %}<a href="{% url 'recomendadas' %}">Perguntas Recomendadas</a>
-{% else %}
-<body>
+{% block sidebar %} <style type="text/css"> </style> {% endblock %}
+
+
+<div class="main">
+
 {% block content %}
+        <style type="text/css">
+        .main { margin-left: 25px; margin-top: 30px; }
+        .title { font-size: 1.4em; margin-top: 10px; border-bottom: 0px solid #ccc; padding-left: 4px; }
+        .last { border: 0px; }
+        .title a { text-decoration: none; }
+        .button { background: #999; color: white; padding: 4px; text-decoration: none; }
+
+        td { border-bottom: 1px solid #ccc; }
+        #list { border: 1px solid #ccc; width: 700px; }
+    </style>
         {% if form.errors %}
             <p>Dados incorretos. Tente novamente</p>
         {% endif %}
@@ -31,8 +36,5 @@
      <input type="submit" value="login" />
      <input type="hidden" name="next" value="{{ next }}" />
     </form>
-
+</div>
 {% endblock %}
-{% endif %}
-</body>
-</html>
