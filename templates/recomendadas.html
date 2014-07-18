@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% if not user.is_authenticated %}<a href="/">Você precisa se logar</a>
+{% else %}
+
+<div id="list">
+<table border="0" cellpadding="4" width="100%">
+    <tr>
+        <td>Perguntas</td>
+        <td>Respostas</td>
+        <td>Última resposta</td>
+        <td>Contexto</td>
+        <td></td>
+    </tr>
+
+    {% for tag in tagssimilares %}
+    <tr>
+        <td {% if forloop.last %}class="last"{% endif %}>
+        <div class="title"><a href=''>{{ tag }}</a>
+            </div></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endif %}
+<!-- Sugere todas as postagens  -->
+<a id="todas_perguntas" class="buttont" href=
+"{% url 'main' %}">Navegar por todas as perguntas</a>
+<br />
+<br />
+
+</body>
+</html>

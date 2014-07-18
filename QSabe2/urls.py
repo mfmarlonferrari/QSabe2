@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url(r'^(?P<pk>[0-9]+)/respostas/$', 'QSabe2_Nucleo.views.pergunta', name='pergunta'),
     url(r"^postar/(nova_pergunta|responder)/(\d+)/$", 'QSabe2_Nucleo.views.postar',name='postar'),
     url(r"^responder/(\d+)/$", 'QSabe2_Nucleo.views.responder',name='responder'),
+    url(r"^recomendadas/", 'QSabe2_Nucleo.views.perguntaPorTags',name='recomendadas'),
     url(r"^nova_pergunta/(\d+)/$", 'QSabe2_Nucleo.views.nova_pergunta', name='nova_pergunta'),
 )

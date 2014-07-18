@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from QSabe2_Nucleo.models import Questoes, Pergunta, Resposta, PerfilUsuario
 from taggit.models import Tag
@@ -31,6 +31,13 @@ def pergunta(request, pk):
     context = dict(respostas=respostas, pk=pk, titulo=titulo, explicacao=explicacao, tags=tags)
     return render(request, 'respostas.html', context)
 
+def perguntaPorTags(request):
+    """Lista as perguntas com as tags do usuario"""
+    perfil = request.user.perfilusuario_set.all()[0]
+    tagssimilares = perfil.especialidades.similar_objects()
+    context = dict(tagssimilares=tagssimilares)
+    return render(request, 'recomendadas.html',context)
+
 def postar(request, ptipo, pk):
     """Exibe um form de post generico"""
     acao = reverse("QSabe2_Nucleo.views.%s" % ptipo, args=[pk])
@@ -48,7 +55,7 @@ def nova_pergunta(request, pk):
     p = request.POST
     if p["destino"] and p["conteudo"]:
         questao = Questoes.objects.get(pk=pk)
-        #agente de tokenizacao, tagging, removedor de stopwords
+        #tokenizacao, tagging, removedor de stopwords
         tokenizada = nltk.word_tokenize(p["destino"])
         emtags = nltk.tag.pos_tag(tokenizada)
         stopwords = nltk.corpus.stopwords.words('portuguese')
@@ -71,7 +78,6 @@ def responder(request, pk):
         titulo = titulo[0]
         resposta = Resposta.objects.create(pergunta=pergunta, titulo=titulo, texto=p["conteudo"],
                                            criador=request.user)
-        resposta.tags.add(*tags)
         #insere tag no perfil
         perfil = request.user.perfilusuario_set.all()[0]
         perfil.especialidades.add(*tags)

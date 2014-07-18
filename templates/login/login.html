@@ -7,7 +7,7 @@
         <title>Bem-Vindo ao QSABE2!</title>
         
 </head>
-{% if user.is_authenticated %}<a href="/listagem">Início</a>
+{% if user.is_authenticated %}<a href="{% url 'recomendadas' %}">Perguntas Recomendadas</a>
 {% else %}
 <body>
 {% block content %}

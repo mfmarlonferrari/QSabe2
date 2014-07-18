@@ -22,7 +22,7 @@ class RespostaAdmin(admin.ModelAdmin):
 
 class PerfilUsuarioAdmin(admin.ModelAdmin):
     search_fields = ["especialidades"]
-    list_display = ["postagens", "usuario", "especialidades"]
+    list_display = ["usuario", "postagens", "especialidades"]
 
 admin.site.register(Questoes, QuestoesAdmin)
 admin.site.register(Pergunta, PerguntaAdmin)

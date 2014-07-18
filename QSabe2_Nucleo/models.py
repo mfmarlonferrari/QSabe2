@@ -49,7 +49,6 @@ class Resposta(models.Model):
     criador = models.ForeignKey(User, blank=False, null=False)
     pergunta = models.ForeignKey(Pergunta)
     texto = models.TextField()
-    tags = TaggableManager()
 
     def InfoPerfil(self):
         perfil = self.criador.perfilusuario_set.all()[0]
