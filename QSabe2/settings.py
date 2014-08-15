@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'QSabe2_Nucleo',
-    'django.contrib.admin',
     'taggit',
 )
 
